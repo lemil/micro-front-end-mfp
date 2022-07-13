@@ -7,17 +7,13 @@ on:
     paths:
       - 'packages/container/**'
 
-
 defaults:
   run:
     working-directories: packages/container
 
-    
 jobs:
   build:
-
     runs-on: ubunut-latest
-    
     steps:
       - uses: actions/checkout@v2
       - run: npm install 
