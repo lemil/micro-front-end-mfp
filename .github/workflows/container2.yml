@@ -24,7 +24,7 @@ jobs:
     - name: Build-Install
       run: |
         npm install
-        npm build
+        npm run build
 
     - name: Deploy on AWS
       run: aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/container/latest
