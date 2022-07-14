@@ -9,12 +9,13 @@ import Landing from './components/Landing';
 import Pricing from './components/Pricing';
 
 const generatedClassName = createGenerateClassName({
-    'ma',
-});
+    productionPrefix:'ma',
+ });
+ 
 
 export default() => {
     return <div>
-        <StylesProvider>
+        <StylesProvider generateClassName={generatedClassName}>
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/pricing" component={Pricing} />
